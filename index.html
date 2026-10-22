@@ -102,7 +102,7 @@
   .slot { width: 62px; height: 9px; margin: 0 auto 20px; border-radius: 999px; background: var(--night); border: 1px solid var(--c-line-strong); }
 
   .logo-plate { background: #fff; border-radius: 22px; padding: 14px 18px; display: grid; place-items: center; box-shadow: 0 18px 40px -22px rgba(0, 0, 0, .6); }
-  .logo-plate img { width: min(100%, 320px); height: auto; }
+  .logo-plate img { width: min(100%, 320px); height: auto; mix-blend-mode: multiply; }
   .lead { margin-top: 24px; text-align: center; font: 600 clamp(1.3rem, 6.4vw, 1.65rem)/1.2 var(--display); letter-spacing: -.015em; text-wrap: balance; }
   .lead em { font-style: normal; color: var(--cyan); }
   .about { margin-top: 12px; text-align: center; color: var(--mist); font-size: .9rem; max-width: 42ch; margin-inline: auto; }
@@ -207,6 +207,7 @@
 
   /* ---------- share sheet ---------- */
   .sheet-wrap { position: fixed; inset: 0; z-index: 30; display: grid; align-items: end; justify-items: center; background: rgba(2, 6, 18, .72); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); padding: 0 max(0px, env(safe-area-inset-left, 0px)) 0 max(0px, env(safe-area-inset-right, 0px)); }
+  .sheet-wrap[hidden] { display: none; }
   .sheet {
     width: min(100%, 520px); padding: 18px 20px calc(22px + env(safe-area-inset-bottom, 0px)); border-radius: 26px 26px 0 0;
     background: linear-gradient(160deg, var(--card-a), var(--card-b)); color: var(--ice); border: 1px solid var(--c-line-strong); border-bottom: 0;
